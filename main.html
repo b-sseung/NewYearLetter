@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="image/icon.jpg">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <title>배똥's Letter</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div>
+    <div class="main_wrapper" alt="배똥's Letter">
+      <img class="main_image" src="image/main_image_white.png" alt="배똥's Letter">
+    </div>
+    <div class="contents_wrapper" alt="중간 내용">
+      <div class="contents_background">
+        <div class="FormId">
+          <label class="IdPw">Id</label>
+          <input id="login_id" type="text">
+        </div>
+        <div class="FormPw">
+          <label class="IdPw">PassWord</label>
+          <input id="login_pw" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="button_wrapper" alt="로그인 버튼">
+      <label class="tlqkf">시발</label>
+      <script>
+        var value = true;
+        var tlqkf = document.querySelector('.tlqkf');
+        var button = document.querySelector('.button_wrapper');
+        button.onclick = function() {
+          if (value) {
+            value = false;
+            tlqkf.style.display = "none";
+          } else {
+            value = true;
+            tlqkf.style.display = "block";
+          }
+        }
+      </script>
+    </div>
+  </div>
+</body>
+</html>

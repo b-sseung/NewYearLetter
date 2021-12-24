@@ -1,0 +1,44 @@
+.main_wrapper {
+  background: #5d6166;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+}
+
+.main_image {
+  display:block;
+  max-width: 100%;
+  width:210px;
+  margin: 20px auto;
+  color: #fff;
+}
+
+.contents_wrapper {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+
+.contents_background {
+  max-width: 50vw;
+  margin: auto 0;
+}
+
+.FormId, .FormPw {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.FormId label, .FormPw label {
+  width: 100px;
+}
+
+#login_id, #login_pw {
+  padding: 10px;
+}
+
+.button_wrapper {
+  height: 20vh;
+  background: #0f0;
+}
