@@ -10,11 +10,18 @@
   <meta name="theme-color" content="#ffffff">
   <title>배똥's Letter</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/snow.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <script src="js/main.js"></script>
+
 </head>
 <body>
-  <div>
+  <div class="snow_wrapper">
+    <script src="js/snow.js"></script>
+  </div>
+  <div class="body_wrapper">
     <div class="main_wrapper" alt="배똥's Letter">
-      <img class="main_image" src="image/main_image_white.png" alt="배똥's Letter">
+      <img class="main_image" src="image/main_image_white2.png" alt="배똥's Letter">
     </div>
     <div class="contents_wrapper" alt="중간 내용">
       <div class="contents_background">
@@ -29,22 +36,10 @@
       </div>
     </div>
     <div class="button_wrapper" alt="로그인 버튼">
-      <label class="tlqkf">시발</label>
-      <script>
-        var value = true;
-        var tlqkf = document.querySelector('.tlqkf');
-        var button = document.querySelector('.button_wrapper');
-        button.onclick = function() {
-          if (value) {
-            value = false;
-            tlqkf.style.display = "none";
-          } else {
-            value = true;
-            tlqkf.style.display = "block";
-          }
-        }
-      </script>
+      
     </div>
+
   </div>
 </body>
+
 </html>
