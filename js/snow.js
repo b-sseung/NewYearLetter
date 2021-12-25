@@ -1,4 +1,4 @@
-setInterval(createSnow, 500);
+setInterval(createSnow, 400);
 
 function createSnow() {
    const snow = document.createElement('i');
