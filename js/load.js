@@ -26,17 +26,68 @@ window.onload = function() {
       })(i);
     } else {
       setTimeout(function(){
-        load_image_id.value = "letter_image"
+        load_image_id.value = "letter_img_ani"
         load_image_src.value = "image/letter_open1.png";
-      }, 5000);
+        setTimeout(function(){
+          load_image_id.value = "letter_image"
+        }, 3000);
+      }, 4000);
     }
   }
 
+  var load_image1 = document.createElement("img");
+  var load_image2 = document.createElement("img");
+
+  var load_image_id1 = document.createAttribute("id");
+  var load_image_id2 = document.createAttribute("id");
+
+  var load_image_src1 = document.createAttribute("src");
+  var load_image_src2 = document.createAttribute("src");
+
+  var load_image_index = document.createAttribute("style");
+  var load_image_index1 = document.createAttribute("style");
+  var load_image_index2 = document.createAttribute("style");
+
+  var letter2_delay = true;
   load_image.addEventListener("click", function(){
     if (load_image_src.value == "image/letter_open1.png") {
-      load_image_src.value = "image/letter_open2.png";
-    } else if (load_image_src.value == "image/letter_open2.png") {
-      load_animation_wrapper.removeChild(load_image);
+      openLetter();
     }
   });
+
+  load_image2.addEventListener("click", function(){
+    console.log("시발");
+    load_image_id1.value = "letter_papper";
+
+    setTimeout(function(){
+      load_image_index1.value = "z-index: 3";
+      load_image_index2.value = "z-index: 2";
+    }, 500);
+  });
+
+  function openLetter() {
+    load_image_id1.value = "letter_image";
+    load_image_id2.value = "letter_image";
+
+    load_image_src.value = "image/letter_open3.png";
+    load_image_src1.value = "image/letter_open4.png";
+    load_image_src2.value = "image/letter_open5.png";
+
+    load_image_index.value = "z-index: 1";
+    load_image_index1.value = "z-index: 2";
+    load_image_index2.value = "z-index: 3";
+
+    load_image.setAttributeNode(load_image_index);
+    load_image1.setAttributeNode(load_image_id1);
+    load_image1.setAttributeNode(load_image_src1);
+    load_image1.setAttributeNode(load_image_index1);
+    load_image2.setAttributeNode(load_image_id2);
+    load_image2.setAttributeNode(load_image_src2);
+    load_image2.setAttributeNode(load_image_index2);
+
+    load_animation_wrapper.appendChild(load_image1);
+    load_animation_wrapper.appendChild(load_image2);
+
+    letter2_delay = false;
+  }
 }
