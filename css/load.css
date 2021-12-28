@@ -1,0 +1,22 @@
+.load_animation_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#load_image {
+  position: absolute;
+  object-fit: scale-down;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+#letter_image {
+  position: absolute;
+  object-fit: scale-down;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0 auto;
+  cursor: pointer;
+}
