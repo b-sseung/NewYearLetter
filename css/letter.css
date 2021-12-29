@@ -1,4 +1,48 @@
+@font-face {
+  src: url("../fonts/BMJUA_ttf.ttf");
+  font-family: "jua"
+}
 
 .letter_body_wrapper {
   position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.letter_border {
+  border: 5px dashed black;
+  background: #FFFFFF88;
+  border-radius: 50px;
+  width:77vw;
+  margin: 10px auto;
+}
+
+.letter_layout {
+  margin: 0 auto;
+  padding: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+#to_text, #from_text {
+  font-family: "jua";
+  line-height: 200%;
+  text-align: left;
+}
+
+#main_text {
+  font-family: "jua";
+  line-height: 200%;
+  text-align: center;
+}
+
+.snowman_layout {
+  width: 30vw;
+  max-height: 30vh;
+  object-fit: contain;
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+  z-index: 1;
 }
