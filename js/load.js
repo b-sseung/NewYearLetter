@@ -56,13 +56,22 @@ window.onload = function() {
   });
 
   load_image2.addEventListener("click", function(){
-    console.log("시발");
-    load_image_id1.value = "letter_papper";
+    if (load_image_id1.value != "letter_papper") {
+      load_image_id1.value = "letter_papper";
 
-    setTimeout(function(){
-      load_image_index1.value = "z-index: 3";
-      load_image_index2.value = "z-index: 2";
-    }, 500);
+      setTimeout(function(){
+        load_image_index1.value = "z-index: 3";
+        load_image_index2.value = "z-index: 2";
+      }, 500);
+    } else {
+    
+    }
+  });
+
+  load_image1.addEventListener("click", function(){
+    if (load_image_id1.value == "letter_papper") {
+      location.href="letter.html";
+    }
   });
 
   function openLetter() {

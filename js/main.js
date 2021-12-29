@@ -1,3 +1,5 @@
+import { position, id_array, pw_array, letter_array } from "./firebase.js";
+
 window.onload = function() {
   var login_id = document.getElementById("login_id");
   var login_pw = document.getElementById("login_pw");
@@ -6,11 +8,11 @@ window.onload = function() {
   let id_value = (login_id.value == "") ? false : true;
   var pw_value = (login_pw.value == "") ? false : true;
 
-  console.log(id_value + ", " + pw_value);
-
   checkIdPw(id_value, pw_value);
 
+  
   login_id.addEventListener("keyup", function(){
+
     if (login_id.value != "") {
       if (!id_value) id_value = true;
     } else {
@@ -37,13 +39,26 @@ window.onload = function() {
   loginBt.addEventListener("mouseout", function(){
     loginBt.src = "image/read_button.png";
   });
+  
+  var arr_index = -1;
 
   loginBt.addEventListener("click", function() {
-    localStorage.setItem("id", login_id.value);
-    localStorage.setItem("pw", login_pw.value);
-    login_id.value = "";
-    login_pw.value = "";
-    location.href="load.html";
+    if (id_array.indexOf(login_id.value) != -1) {
+      arr_index = id_array.indexOf(login_id.value);
+
+      if (pw_array[arr_index] == login_pw.value) {
+        localStorage.setItem("letter", letter_array[arr_index]);
+
+        login_id.value = "";
+        login_pw.value = "";
+        arr_index = -1;
+        location.href="load.html";
+      } else {
+        noPassLogin();
+      }
+    } else {
+      noPassLogin();
+    }
   });  
 
   function checkIdPw(id_value, pw_value) {
@@ -54,5 +69,7 @@ window.onload = function() {
     }
   }
 
-
+  function noPassLogin(){
+    alert("아이디와 비밀번호를 확인해주세요.");
+  }
 }

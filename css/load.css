@@ -1,7 +1,11 @@
+.load_snow_wrapper {
+  position: relative;
+}
+
 .load_body_wrapper {
   position: absolute;
-
 }
+
 .load_animation_wrapper {
   display: flex;
   justify-content: center;
@@ -18,7 +22,7 @@
   max-height: 100vh;
 }
 
-#letter_image, #letter_img_ani, #letter_papper {
+#letter_image, #letter_img_ani, #letter_papper, #letter_turn {
   position: absolute;
   object-fit: scale-down;
   margin: auto auto;
@@ -43,6 +47,10 @@
   animation-iteration-count: 1;  
 }
 
+#letter_turn {
+  animation: turnLetter 3s 1, turnLetterSrc 3s 1;
+}
+
 @keyframes firstLetter {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -53,7 +61,3 @@
   50% {transform: rotateX(-30deg) translateY(-100px)}
   to {transform:  rotateX(0deg) translateY(0px)}
 }
-/* 
-@keyframes turnLetter {
-  from {transform: rotateY(0deg) translateY(0px)}
-} */
