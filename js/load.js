@@ -4,7 +4,7 @@ window.onload = function() {
     var idText = localStorage.getItem("id");
   }
 
-  console.log(idText);
+  // console.log(idText);
 
   var load_image = document.createElement("img");
   var load_image_id = document.createAttribute("id");
