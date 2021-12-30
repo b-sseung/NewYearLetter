@@ -8,6 +8,11 @@ window.onload = function () {
   var main_text = document.getElementById("main_text");
   var from_text = document.getElementById("from_text");
 
+  
+  window.addEventListener("unload", function(){
+    localStorage.setItem("letter", "");
+  });
+  
   var temp = "";
   for (var i = 0; i < letter_arr.length; i++) {
     if (i == 0) {
@@ -18,6 +23,7 @@ window.onload = function () {
       temp = temp + "<br/>" + letter_arr[i];
     }
   }
-
   main_text.innerHTML = temp;
+
+  
 }

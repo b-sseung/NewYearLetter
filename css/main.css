@@ -42,11 +42,11 @@ body{
 }
 
 .contents_background {
-  max-width: 50vw;
+  width: 70vw;
   margin: auto 0;
 }
 
-.FormId, .FormPw {
+.FormCode {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -54,17 +54,16 @@ body{
   margin: 40px auto;
 }
 
-.FormId label, .FormPw label {
+.FormCode label {
   width: 100px;
   font-family: "jua";
   text-align: center;
   margin: auto 0;
 }
 
-#login_id, #login_pw {
+#login_code {
   padding: 5px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  width: 200px;
 }
 
 .button_wrapper {

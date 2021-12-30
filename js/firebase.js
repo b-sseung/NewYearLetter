@@ -11,8 +11,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-var id_array = [];
-var pw_array = [];
+var code_array = [];
 var letter_array = [];
 var position = 0;
 
@@ -40,9 +39,6 @@ var settings = {
   timestampsInSnapshots: true,
 };
 
-console.log("tlqkf");
-
-
 //이건 그냥 하나만 가져오는 것
 // var docRef = db.collection("IdPw").doc("test");
 
@@ -60,19 +56,16 @@ console.log("tlqkf");
 
 
 //이게 전체
-db.collection("IdPw").get().then((querySnapshot) => {
+db.collection("Code").get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
+      // console.log(doc.id, " => ", doc.data());
 
-      id_array[position] = doc.get("id");
-      pw_array[position] = doc.get("password");
+      code_array[position] = doc.get("code");
       letter_array[position] = doc.get("text");
-
-      console.log(id_array + ", " + pw_array + ", " + letter_array);
 
       position++;
   });
 });
 
-export { position, id_array, pw_array, letter_array };
+export { position, code_array, letter_array };
